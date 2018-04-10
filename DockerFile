@@ -1,6 +1,6 @@
 FROM mysql:latest
 EXPOSE 3306
 RUN apt-get update && apt-get dist-upgrade -y
-RUN apt-get install -y net-tools wget curl sudo telnet nano openssh-server openssh-client bzip2 tar bc git iputils-ping mysql-client
+RUN apt-get install -y nano vim
 RUN apt-get update && apt-get clean all
 ADD ./my.cnf /etc/mysql/conf.d/custom.cnf
